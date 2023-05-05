@@ -3,7 +3,7 @@ const tokenHash = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
 
 async function sendTo(to, amount)
 {
-  const dpstToken = await ethers.getContractFactory("KryxiviaCoin");
+  const dpstToken = await ethers.getContractFactory("DefiPoolShareCoin");
   const contract = await dpstToken.attach(tokenHash)
   return await contract.transfer(to, amount)
 }

@@ -122,7 +122,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      */
     function transfer(address to, uint256 amount) public virtual override returns (bool) {
         address owner = _msgSender();
-        require (!_isBot[owner] && !_isBot[to], "You are restricted from interacting with Kryxivia service, if you think that this is an error, please contact our team.");
+        require (!_isBot[owner] && !_isBot[to], "You are restricted from interacting with DefiPoolShare service, if you think that this is an error, please contact our team.");
         _transfer(owner, to, amount);
         return true;
     }
@@ -172,7 +172,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         uint256 amount
     ) public virtual override returns (bool) {
         address spender = _msgSender();
-        require (!_isBot[from] && !_isBot[to], "You are restricted from interacting with Kryxivia service, if you think that this is an error, please contact our team.");
+        require (!_isBot[from] && !_isBot[to], "You are restricted from interacting with DefiPoolShare service, if you think that this is an error, please contact our team.");
 
         _spendAllowance(from, spender, amount);
         _transfer(from, to, amount);
