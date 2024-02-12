@@ -27,7 +27,6 @@ contract DPSTERC20Contract is OFTCore, AccessControl, ERC20Burnable {
         _dpstDeployer = msg.sender;
         _mint(_dpstDeployer, _totalSupply);
     }
-    
     // @dev major indicates they shared a compatible msg payload format and CAN communicate between one another
     // @dev minor indicates a varying version, eg. OFTAdapter vs. OFT
     function oftVersion() external pure returns (uint64 major, uint64 minor) {
@@ -60,7 +59,7 @@ contract DPSTERC20Contract is OFTCore, AccessControl, ERC20Burnable {
 
         _burn(address(this), amountDebitedLD);
     }
-
+    // @dev _srcEid The source chain ID
     function _credit(
         address _to,
         uint256 _amountToCreditLD,
