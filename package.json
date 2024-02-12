@@ -9,6 +9,7 @@
     "ethers": "^5.4.7"
   },
   "dependencies": {
+    "@layerzerolabs/lz-evm-oapp-v2": "^2.0.25",
     "@openzeppelin/contracts": "^4.3.2",
     "hardhat": "^2.6.7"
   }
